@@ -4,15 +4,18 @@
 
 
 def uniqueCharacter(s):
+    # Defining dictionary for add all letters to allLetters
+    allLetters = {}
     
-    i=1
-    length=len(s)
-    while i<length:
-        if s[i] == s[i-1]:
+    for letter in s:
+        # If letter is created in allLetters returning False
+        if allLetters.get(letter):
             return False
-        i+=1
+        # Else creating letter in allLetters
+        else:
+            allLetters[letter]=1
+    # If did not return False returning True
     return True
 
-
-a = uniqueCharacter("")
-print(a)
+a = uniqueCharacter("abcedd")
+print("Unique Character In String Problem : " + str(a))
