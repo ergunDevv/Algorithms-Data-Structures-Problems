@@ -1,3 +1,9 @@
+# PROBLEM : Consider an array of non-negative integers. A second array is formed by shuffling the 
+# elements of the first array and deleting a random element. Given these two arrays, find which
+# element is missing in the second array. 
+# Input: FindTheMissingElement([9,8,7,6,5,4,3,2,1],[9,8,7,5,4,3,2,1])
+# Output: 5 is the missing number.
+
 def FindTheMissingElement(Arr1,Arr2):
     # Defining sum of Elements variable
     sumOfElements=0
@@ -11,7 +17,7 @@ def FindTheMissingElement(Arr1,Arr2):
     # just one number that missing. 
     return  sumOfElements
 a=FindTheMissingElement([9,8,7,6,5,4,3,2,1],[9,8,7,5,4,3,2,1])
-print("FindTheMissingElement : "+str(a))
+print("FindTheMissingElement : "+str(a) +" is the missing number")
 
 # !-----------------------------------------------------------------------------!
 # Second Solution
@@ -29,5 +35,5 @@ def FindTheMissingElement2(Arr1,Arr2):
     return num1[-1]
  
 b=FindTheMissingElement2([9,8,7,6,5,4,3,2,1],[9,8,7,5,4,3,2,1])
-print("FindTheMissingElement2 : " +str(b))
+print("FindTheMissingElement2 : "+str(b) +" is the missing number")
 
