@@ -17,9 +17,12 @@ print("FindTheMissingElement : "+str(a))
 # Second Solution
 
 def FindTheMissingElement2(Arr1,Arr2):
+    # Sorting the both array.
     Arr1.sort()
     Arr2.sort()
-
+    # Looping over Arr1 and Arr2 but zip version.
+    # Because of sorted both array if their values are not same it is the missing number
+    # If not return anything Arr1's last character that missing. 
     for num1,num2 in zip(Arr1,Arr2):
         if num1!=num2 :
             return num1
