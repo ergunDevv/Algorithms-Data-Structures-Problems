@@ -11,4 +11,20 @@ def FindTheMissingElement(Arr1,Arr2):
     # just one number that missing. 
     return  sumOfElements
 a=FindTheMissingElement([9,8,7,6,5,4,3,2,1],[9,8,7,5,4,3,2,1])
-print(a)
+print("FindTheMissingElement : "+str(a))
+
+# !-----------------------------------------------------------------------------!
+# Second Solution
+
+def FindTheMissingElement2(Arr1,Arr2):
+    Arr1.sort()
+    Arr2.sort()
+
+    for num1,num2 in zip(Arr1,Arr2):
+        if num1!=num2 :
+            return num1
+    return num1[-1]
+ 
+b=FindTheMissingElement2([9,8,7,6,5,4,3,2,1],[9,8,7,5,4,3,2,1])
+print("FindTheMissingElement2 : " +str(b))
+
