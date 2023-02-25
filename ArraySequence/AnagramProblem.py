@@ -29,23 +29,29 @@
 # hey.isAnagramString("123","1 2")
 
 def isAnagramString(text1,text2):
+    # First lower casing all text and delete the white spaces
     text1=text1.replace(" ","").lower()
     text2=text2.replace(" ","").lower()
+    # Checking if texts are not same length
     if len(text1) != len(text2) :  return False
-
+    # Defining the set of counts 
     count = {}
+    # And first of all adding every character in text1 to count set
     for letter in text1:
         if letter in count:
             count[letter]+=1
         else:
             count[letter]=1
-
+    # Then we are subtract every character from count set if there is character that exist
+    # in text2 but does not exist in count set return false because adding every character of 
+    # text1 above.
     for letter in text2:
         if letter in count:
             count[letter]-=1
         else:
+            # if you want to write more readable do not return false instead of
             return False
-
+    
     # for letter in count:
     #     if count[letter] != 0:
     #         return False
