@@ -49,7 +49,8 @@ def isAnagramString(text1,text2):
         if letter in count:
             count[letter]-=1
         else:
-            # if you want to write more readable do not return false instead of
+            # if you want to write more readable do not return false instead of count[letter]=1
+            # so you can write down below code that works too.
             return False
     
     # for letter in count:
