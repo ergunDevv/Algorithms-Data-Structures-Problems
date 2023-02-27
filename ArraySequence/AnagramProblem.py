@@ -29,7 +29,6 @@
 # hey.isAnagramString("123","1 2")
 
 def isAnagramString(text1,text2):
-
     text1=text1.replace(" ","").lower()
     text2=text2.replace(" ","").lower()
     if len(text1) != len(text2) :  return False
