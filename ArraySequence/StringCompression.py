@@ -8,6 +8,7 @@ def stringCompression(stringForComp):
     stringForComp = stringForComp.replace(" ", "")
     numberOfLetter={}
     stringForReturn=""
+    
     for letter in stringForComp:
         print(letter)
         if numberOfLetter.get(letter):
