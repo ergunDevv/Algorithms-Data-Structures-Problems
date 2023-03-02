@@ -27,6 +27,8 @@ print("Unique Character In String Problem : " + str(a))
 # Second Solution
 
 def uniqueCharacter2(s):
+    # Because of sets in python must unique characters. Comparing lengths of set of s 
+    # and string s if they are not equal returning false if it is returning True
     return len(set(s))==len(s)
 
 b = uniqueCharacter2("abced")
