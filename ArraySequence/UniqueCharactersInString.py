@@ -19,3 +19,17 @@ def uniqueCharacter(s):
 
 a = uniqueCharacter("abcedd")
 print("Unique Character In String Problem : " + str(a))
+
+
+
+
+# !-----------------------------------------------------------------------
+# Second Solution
+
+def uniqueCharacter2(s):
+    return len(set(s))==len(s)
+
+b = uniqueCharacter2("abced")
+print("Unique Character In String Solution2 : " + str(b))
+
+
