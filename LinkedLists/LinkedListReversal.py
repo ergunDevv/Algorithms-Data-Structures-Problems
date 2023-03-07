@@ -26,7 +26,6 @@ def reverse (head):
         return previous
 
 
-
 a = Node(1)
 b = Node(2)
 c = Node(3)
