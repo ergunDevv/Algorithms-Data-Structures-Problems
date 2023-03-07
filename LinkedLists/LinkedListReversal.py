@@ -20,7 +20,7 @@ def reverse (head):
               next =current.nextnode
             #  Than changing current.nextnode to previous this way making linked list reversal.
               current.nextnode=previous
-            # And passing to 
+            # And passing to other element with changing previous to current node and current node to next node
               previous=current
               current=next
         return previous
