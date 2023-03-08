@@ -26,18 +26,19 @@ def coinChangeDynamicly(target,coins,known_results):
 
     if target in coins:
         return 1
-    
+    # With this line if value cached (saved in memory)returning directly
     elif known_results[target]>0:
         return known_results[target]
 
     else:    
         for i in [c for c in coins if c<=target ]:
+               # Recursive call for number of coins for change.
                num_coins = 1 + coinChangeDynamicly(target-i,coins,known_results)
       
                if num_coins< min_coins:
                     min_coins=num_coins
 
-
+                    # Saving the known_result for other values.(No need to search and find value for same values.)
                     known_results[target]=min_coins
     return min_coins
 
